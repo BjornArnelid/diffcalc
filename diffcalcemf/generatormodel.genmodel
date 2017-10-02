@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/diffcalcemf/src" modelPluginID="diffcalcemf" modelName="Generatormodel"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>model.ecore</foreignModel>
+  <genPackages prefix="MatchModel" disposableProviderFactory="true" ecorePackage="model.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//Side">
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Side/RADIANT"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Side/DIRE"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//Side/UNKNOWN"/>
+    </genEnums>
+    <genClasses ecoreClass="model.ecore#//PlayerGroup">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//PlayerGroup/players"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Player">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Player/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Player/id"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Player/matches"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Match">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Match/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Match/winner"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Match/radiant"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Match/dire"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Hero">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Hero/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Hero/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Hero/imagePath"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Contender">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Contender/hero"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Contender/player"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Team">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Team/contenders"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//HeroPool">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//HeroPool/heroes"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

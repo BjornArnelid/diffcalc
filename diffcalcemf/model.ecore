@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="MatchModel" nsURI="http://se.arnelid.bjorn.diffcalc" nsPrefix="se.arnelid.bjorn.diffcalc">
+  <eClassifiers xsi:type="ecore:EClass" name="PlayerGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="players" lowerBound="1"
+        upperBound="5" eType="#//Player"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Player">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="matches" upperBound="-1"
+        eType="#//Match" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Match">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="winner" eType="#//Side"
+        defaultValueLiteral="UNKNOWN"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="radiant" lowerBound="1"
+        eType="#//Team" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dire" lowerBound="1" eType="#//Team"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Side">
+    <eLiterals name="RADIANT"/>
+    <eLiterals name="DIRE" value="1"/>
+    <eLiterals name="UNKNOWN" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Hero">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Contender">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hero" lowerBound="1" eType="#//Hero"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="player" eType="#//Player"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Team">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contenders" lowerBound="5"
+        upperBound="5" eType="#//Contender" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HeroPool">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="heroes" upperBound="-1"
+        eType="#//Hero" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>
