@@ -1,4 +1,4 @@
-package mydotapicker.controller;
+package diffcalc.controller;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -36,7 +36,7 @@ import MatchModel.Player;
 import MatchModel.PlayerGroup;
 import MatchModel.Side;
 import diffcalc.Activator;
-import mydotapicker.view.HeroSuggestionView;
+import diffcalc.view.HeroSuggestionView;
 
 public class MatchUpdateJob extends Job {
 

@@ -1,4 +1,4 @@
-package mydotapicker.controller;
+package diffcalc.controller;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -1,4 +1,4 @@
-package mydotapicker.controller;
+package diffcalc.controller;
 
 import java.io.File;
 import java.io.IOException;

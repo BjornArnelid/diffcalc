@@ -1,4 +1,4 @@
-package mydotapicker.view;
+package diffcalc.view;
 
 import java.util.HashMap;
 

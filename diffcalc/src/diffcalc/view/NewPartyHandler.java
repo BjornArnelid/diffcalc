@@ -1,4 +1,4 @@
-package mydotapicker.view;
+package diffcalc.view;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;

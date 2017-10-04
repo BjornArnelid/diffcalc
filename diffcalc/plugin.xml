@@ -23,7 +23,7 @@
          point="org.eclipse.ui.views">
       <view
             name="View"
-            class="mydotapicker.view.HeroSuggestionView"
+            class="diffcalc.view.HeroSuggestionView"
             id="mydotapicker.view">
       </view>
    </extension>
@@ -49,7 +49,7 @@
 	         <menu
 	               label="party">
 	             <dynamic
-	                   class="mydotapicker.view.ChoosePartyContribution"
+	                   class="diffcalc.view.ChoosePartyContribution"
 	                   id="mydotapicker.dynamic1">
 	             </dynamic>
 	            <command
@@ -71,7 +71,7 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="mydotapicker.view.NewPartyHandler"
+            defaultHandler="diffcalc.view.NewPartyHandler"
             id="mydotapicker.newParty"
             name="name">
       </command>

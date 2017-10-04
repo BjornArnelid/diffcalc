@@ -1,4 +1,4 @@
-package mydotapicker.view;
+package diffcalc.view;
 
 import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.TableViewer;

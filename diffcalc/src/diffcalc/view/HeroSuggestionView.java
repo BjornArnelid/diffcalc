@@ -1,4 +1,4 @@
-package mydotapicker.view;
+package diffcalc.view;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -42,8 +42,8 @@ import MatchModel.Hero;
 import MatchModel.MatchModelFactory;
 import MatchModel.Player;
 import MatchModel.PlayerGroup;
-import mydotapicker.controller.GroupSuggestion;
-import mydotapicker.controller.HeroSuggestionController;
+import diffcalc.controller.GroupSuggestion;
+import diffcalc.controller.HeroSuggestionController;
 
 public class HeroSuggestionView extends ViewPart {
 	
