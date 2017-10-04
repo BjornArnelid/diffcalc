@@ -19,11 +19,8 @@ public class NewPartyWizard extends Wizard {
 	public void addPages() {
 		super.addPages();
 		page = new NewPartyWizardPage();
-		// TODO Set Title
-		// TODO set desciption
 		addPage(page);
 	}
-	// TODO Page as internal class
 
 	public PlayerGroup getGroup() {
 		return group;

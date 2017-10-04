@@ -50,7 +50,6 @@ public class HeroSuggestionController {
 
 	public List<GroupSuggestion> getSuggestedHeroes(List<Hero> allies, List<Hero> enemies, boolean exact) throws InterruptedException {
 		ArrayList<ParseJob> jobs = new ArrayList<>();
-		// TODO In exact mode do we need more then one job??
 		for (Player player : selected.getPlayers()) {
 			ParseJob job = new ParseJob(this, player, allies, enemies, exact);
 			job.schedule();
@@ -77,7 +76,6 @@ public class HeroSuggestionController {
 						}
 
 						HeroSuggestion hs = iter.next();
-						// TODO Null problem
 						if (allies.contains(hs.hero.getHero()) || enemies.contains(hs.hero.getHero())) {
 							iter.remove();
 
@@ -127,7 +125,6 @@ public class HeroSuggestionController {
 	}
 
 	public Collection<Hero> getAllHeroes() {
-		// TODO what about empty
 		HeroPool pool = (HeroPool) heroResource.getContents().get(0);
 		return pool.getHeroes();
 	}

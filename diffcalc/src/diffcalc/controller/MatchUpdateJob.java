@@ -137,7 +137,6 @@ public class MatchUpdateJob extends Job {
 
 	@Override
 	protected IStatus run(IProgressMonitor monitor) {
-		// TODO Be smarter about when and how to run
 		Resource heroResource = Activator.getSharedInstance().getHeroPool();
 		if (heroResource.getContents() == null || heroResource.getContents().isEmpty()) {
 			return Status.CANCEL_STATUS;
@@ -177,7 +176,6 @@ public class MatchUpdateJob extends Job {
 				}
 			}
 		}
-		// TODO notify adapter if match has been added!
 		group.eNotify(null);
 		return Status.OK_STATUS;
 	}
@@ -199,7 +197,6 @@ public class MatchUpdateJob extends Job {
 		} finally {
 			client.close();
 		}
-		// TODO Null might be a problem here
 		return returnValue;
 	}
 }

@@ -58,7 +58,6 @@ public class HeroPoolJob extends Job {
 	}
 	
 	private InputHero[] loadHeroes() throws URISyntaxException, IOException {
-		// TODO handle file does not exist
 		File file = Activator.getWorkSpaceLocation().removeLastSegments(1).append("res/Heroes.json").toFile();
 		Scanner scan = new Scanner(file);  
 		scan.useDelimiter("\\Z");  
