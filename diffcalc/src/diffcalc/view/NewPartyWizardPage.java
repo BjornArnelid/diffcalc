@@ -78,6 +78,9 @@ public class NewPartyWizardPage extends WizardPage {
 				player.setName(name.getText());
 				player.setId(Long.parseLong(id.getText()));
 				added.add(player);
+				
+				name.setText("");
+				id.setText("");
 			}			
 		});
 		setControl(add);
