@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="DiffCalc" uid="diffcalc.product" id="diffcalc.product" application="diffcalc.application" useFeatures="false" includeLaunchers="true">
+<product name="Dota DiffCalc" uid="diffcalc.product" id="diffcalc.product" application="diffcalc.application" version="0.1_Dev" useFeatures="false" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>

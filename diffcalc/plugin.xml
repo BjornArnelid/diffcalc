@@ -22,7 +22,7 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            name="View"
+            name="Hero Suggestions"
             class="diffcalc.view.HeroSuggestionView"
             id="mydotapicker.view">
       </view>
@@ -81,10 +81,14 @@
          point="org.eclipse.core.runtime.products">
       <product
             application="diffcalc.application"
-            name="DiffCalc">
+            name="Dota DiffCalc">
+         <property
+               name="Dota DiffCalc"
+               value="DiffCalc">
+         </property>
          <property
                name="appName"
-               value="DiffCalc">
+               value="Dota DiffCalc">
          </property>
       </product>
    </extension>
